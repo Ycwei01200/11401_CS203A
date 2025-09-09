@@ -1,10 +1,10 @@
 # 11401_CS203A
 
 #Personal information<br>
-<br>-Student ID: 1131556 
-<br>-Name:魏昱承(Yucheng-Wei)  
-<br>-Course: Data Structure / linear algebra  
-<br>-Brief depiction: 
-<br>-a transfer student
+<br>Student ID: 1131556 
+<br>Name:魏昱承(Yucheng-Wei)  
+<br>Course: Data Structure / linear algebra  
+<br>Brief depiction: 
+<br>a transfer student
 <br>My recent plan:Pass the CPE test
 <br>I'm a foodie.
