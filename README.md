@@ -2,7 +2,7 @@
 
 #Personal information<br>
 - Student ID: 1131556 <br>
-- Name:魏昱承(Yucheng-Wei)  <br>
+- Name:魏昱承(Wei-YuCheng)  <br>
 - Course: Data Structure / linear algebra  <br>
 - Brief depiction: <br>
 -- a transfer student<br>
