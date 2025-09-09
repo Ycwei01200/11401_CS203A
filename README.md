@@ -11,8 +11,8 @@
 - I'm a foodie.<br>
 
 #Purpose<br>
--This GitHub repo was created to help me pass the Data Structure course.<br>
+- This GitHub repo was created to help me pass the Data Structure course.<br>
 <br>
 #Source<br>
--Check my [Github](https://github.com/Ycwei01200/Ycwei01200.github.io) account.<br>
--Visit my [Data Structure](https://github.com/Ycwei01200/11401_CS203A) lesson.<br>
+- Check my [Github](https://github.com/Ycwei01200/Ycwei01200.github.io) account.<br>
+- Visit my [Data Structure](https://github.com/Ycwei01200/11401_CS203A) lesson.<br>
