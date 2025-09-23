@@ -14,7 +14,7 @@ int main(){
     for(int i = 0; i < n; i++){
         for (int l = 0; l < row; l++) {
             printf("%d ", array[i][l]);
-            printf("Index %d -> Value: %d, Address: %p\n", i, array[i][l], (void*)&array[i]);
+            printf("Index %d -> Value: %d, Address: %p\n", i, array[i][l], (void*)&array[i][l]);
         }
         printf("\n");
     }
