@@ -1,0 +1,60 @@
+
+### A. Fill-in-the-Blank Questions
+
+1.  In C programming, the programmer is responsible for allocating memory using `malloc` and freeing it using the function **`free`**, which is crucial because C does not feature automatic **garbage collection**.
+2.  An **Abstract Data Type (ADT)** separates the **specification** of the objects and operations from the representation and **implementation** of those operations.
+3.  Arrays are collections of elements stored in **contiguous** memory locations and allow for direct, constant-time access, which is represented by the asymptotic notation **$O(1)$**.
+4.  The phase in the Software Development Life Cycle (SDLC) where requirements are translated into system architecture, features, and functions is called **Design**.
+5.  A **pointer** stores the memory address of a variable or object and is essential for linking nodes in dynamic data structures like linked lists, trees, and graphs.
+
+### B. Code Review Questions
+
+1.  **Missing Step:**
+    The critical missing step is the deallocation of the dynamically allocated memory. In C, the programmer is responsible for freeing memory requested from the Operating System.
+    *   **Correct Function Call Needed:** `free(data_array);`
+
+2.  **Why use a pointer to the same struct?**
+    When designing a Linked List node, a **pointer** to the next element is required because pointers are the **backbone of dynamic data structures**. Pointers store the memory address of another object, allowing the structure to **link nodes** in the list. If the struct contained a full instance of the same struct rather than a pointer to it, it would create an infinite, fixed-size structure at compile time, preventing dynamic resizing and node linking. The use of a `struct` along with a pointer helps design data structures that include both data and relationships.
+
+### C. Time Complexity Analysis
+
+1.  **Array Access Complexity**
+    The Big-O time complexity for retrieving an element at a known index $i$ in a one-dimensional array $A$ is **$O(1)$ (Constant Time)**.
+    *   **Justification:** This complexity is achieved because arrays store elements in **contiguous memory locations**. This storage pattern allows for **direct index lookup**, meaning the memory address of the target element can be calculated instantly, regardless of the array's size ($N$).
+
+2.  **Search Algorithm Comparison**
+    *   Linear Search (Unsorted Array): $O(n)$
+    *   Binary Search (Sorted Array): $O(\log n)$
+    *   **Reason for Binary Search Superiority:** Binary search achieves $O(\log n)$ because it requires the array to be **sorted**. When the array is sorted, the algorithm can repeatedly discard half of the remaining search elements in each step, guaranteeing that the target number can be found (or its non-existence confirmed) in a logarithmic number of steps.
+
+3.  **Array Modification Complexity**
+    Inserting a new data element at the beginning (index 0) of a fully populated array of size $N$ has a time complexity of **$O(n)$ (Linear Time)**.
+    *   **Justification:** Arrays use contiguous memory. To insert an element at the beginning, all existing elements (up to $N$) must be **shifted** one position forward to create space for the new item. Since the number of required shift operations is directly proportional to the number of elements $N$, the operation is considered linear.
+
+### D. Short Answer Questions
+
+1.  **ADT vs. Data Type**
+    | Aspect | Data Type (in programming language) | ADT (Abstract Data Type) |
+    | :--- | :--- | :--- |
+    | **Focus** | How data is stored and the allowed operations. It is tightly bound to the **implementation details** of the specific language (e.g., `int` in C). | **What** operations are supported (the interface or specification). It is a conceptual model, **programming-language independent**. |
+
+2.  **Algorithm Criteria**
+    All algorithms must satisfy five criteria. Three of these criteria are:
+    *   **Input:** There must be zero or more quantities that are externally supplied.
+    *   **Output:** At least one quantity must be produced.
+    *   **Definiteness:** Each instruction within the algorithm must be clear and unambiguous.
+    *   *Other criteria include Finiteness and Effectiveness.*
+
+3.  **Data Structure Operations (Advanced/Status)**
+    Beyond the Core CRUD (Create, Read, Update, Delete), data structures support operations such as:
+    *   **Status Operation (e.g., `isEmpty`):** Checks if the data structure currently holds no elements.
+    *   **Status Operation (e.g., `count`):** Returns the total number of elements currently stored in the structure.
+    *   **Advanced Operation (e.g., `Search`):** Finds a specific data element within the structure.
+    *   **Advanced Operation (e.g., `push`/`pop`):** Specific operations defined for Stacks, representing insertion (push) and removal (pop) according to the Last-In, First-Out (LIFO) principle.
+
+4.  **Data Structures Categories**
+    The classification of data structures includes four main categories:
+    1.  **Linear Data Structures:** Data items are sequential, connected directly to neighbors (Examples: Array, Linked List, Stack, Queue).
+    2.  **Non-Linear Data Structures:** Elements are arranged in complex, multi-dimensional relationships (Examples: Tree, Graph).
+    3.  **Hash-based Data Structures:** (Example: Hash Table).
+    4.  **Specialized Data Structures:** (Examples: Heap, Trie, Bloom Filter).
