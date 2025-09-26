@@ -31,7 +31,7 @@ B. Code Review Questions
 15.	    // [Missing Step Here]
 16.	}
 Ans:
-   #include<iostream>
+   #include<stdio.h>
    int main(){
     void process_data() {
 	    int n = 100;
