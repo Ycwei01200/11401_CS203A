@@ -1,0 +1,27 @@
+Array-based Queue 
+是 線性 + FIFO 資料結構，
+有 兩個入口：front（輸出）、rear（輸入）。
+需記錄：
+
+MAX_SIZE（容量）
+front / rear（指標）
+
+Enqueue：
+rear = (rear + 1) % MAX_SIZE; arr[rear] = x;
+→ 用 環形取模 避免元素前移
+Dequeue：
+front = (front + 1) % MAX_SIZE; x = arr[front];
+→ 同樣環形移動
+關鍵風險：
+
+Overflow：(rear + 1) % MAX_SIZE == front → 再加會覆蓋舊資料
+Underflow：front == rear → 再取會出錯
+
+設計核心：犧牲一格空間，讓 front == rear 明確表示「空」
+----------------------------------------------------------------------------------------------
+stack-array-based
+其實是因為array-based ，array (static)是fixed-sized 
+所以是先要先需要最大值(the capacity of the array)
+用來判斷陣列的大小與狀況
+-1就是empty stack ，max_size -1 就是full empty
+也用來判斷push/pop的index指引
