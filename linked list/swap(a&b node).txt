@@ -1,0 +1,46 @@
+Requirment Node:a',b',a,b;
+p(head)->a'->a->k->b'->b;
+#abstract from a and b
+a = a'->next;
+a'->next = a->next;
+a->next  = NULL;
+b = b'->next;
+b'->next = b->next;
+b->next = NULL;
+#exchange node a and b
+a->next = b'->next;
+b'->next = a;
+b->next = a'->next;
+a'->next =b;
+-------------------------------------------------------------------------------------------------------------------------------
+if(a in head of the linked list,b in middle of the linked list)
+
+a -> x->b'->b->c;
+dummy->a->x->b'->b->c;
+then 
+
+struct node dummy ;
+dummy.next = a;
+dummy.next = a->next;
+a->next = NULL;
+b = b'->next;
+b'->next = b->next;
+b->next = NULL;
+
+a->next = b'->next;
+b'->next = a;
+
+b->next = dummy->next;
+dummy->next = b;
+
+--------------------------------------------------------------------------------------------------------------------------------
+if(a->next = b,then a and b are both in the middle of the linked list)
+
+prev -> a -> b ->c
+
+prev->next =b;
+a->next = b->next;
+b->next = a;
+
+
+
