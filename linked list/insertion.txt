@@ -1,0 +1,21 @@
+Requirment Node:target,insert;
+
+
+
+insert in mid
+
+insert->next = target->next;
+target->next = insert;
+
+insert in head
+
+target = head;
+insert->next = head;
+head   = insert;
+
+insert in tail
+
+insert->next  = NULL;
+target->next  = insert;
+
+
