@@ -1,0 +1,23 @@
+Requirment Node:prev,target;
+
+
+
+insert in mid
+  
+prev->next = target->next;
+free(target);
+
+
+insert in head
+
+target = head;
+head   = head->next;
+free(target);
+
+insert in tail
+
+prev->next = NULL;
+free(target);
+
+
+
