@@ -2,27 +2,26 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Build C++ (AssignmentIV CXX)",
             "type": "cppbuild",
-            "label": "C/C++: g++.exe build all cpp files",
             "command": "C:/mingw64/bin/g++.exe",
             "args": [
-                "${workspaceFolder}/CXX/main.cpp",
-                "${workspaceFolder}/CXX/hash_fn.cpp",
+                "main.cpp",           // 直接用相對路徑，不用 ${workspaceFolder}/CXX/
+                "hash_fn.cpp",
                 "-o",
-                "${workspaceFolder}/CXX/main.exe",
+                "main.exe",
                 "-std=c++17",
-                "-fdiagnostics-color=always",
-                "-g"
+                "-g",
+                "-Wall"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
             },
-            "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Build main.cpp and hash_fn.cpp together"
+            "problemMatcher": ["$gcc"]
         }
     ]
 }

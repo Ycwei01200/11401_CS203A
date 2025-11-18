@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build C version",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "hash_fn.c",
+                "main.c",
+                "-o",
+                "main.exe",
+                "-std=c11",
+                "-g"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc",
+            "detail": "Build C version with gcc"
+        }
+    ]
+}

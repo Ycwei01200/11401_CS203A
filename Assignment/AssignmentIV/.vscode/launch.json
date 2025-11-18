@@ -2,35 +2,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++: g++.exe 建置並除錯 (WinLibs GCC 15.2)",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-      "args": [],
-      "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": true,
-      "MIMode": "gdb",
-      "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
-      "setupCommands": [
-        {
-          "description": "啟用 gdb 美化列印",
-          "text": "-enable-pretty-printing",
-          "ignoreFailures": true
-        },
-        {
-          "description": "設定反組譯語法為 Intel",
-          "text": "-gdb-set disassembly-flavor intel",
-          "ignoreFailures": true
-        }
-      ],
-      "preLaunchTask": "C/C++: g++.exe build active file",
-      "logging": {
-        "engineLogging": false
-      }
-    },
-    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
@@ -40,7 +11,7 @@
       "cwd": "d:/Github/11401_CS203A/Assignment/AssignmentIV/CXX",
       "program": "d:/Github/11401_CS203A/Assignment/AssignmentIV/CXX/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

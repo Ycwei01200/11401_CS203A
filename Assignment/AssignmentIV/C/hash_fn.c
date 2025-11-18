@@ -19,6 +19,7 @@ int myHashInt(int key, int m) {
     if(temp_key < 0){
         temp_key = -key;
         hash     = 1000000; 
+    }
     while(temp_key != 0){
         hash = hash * 31 + (temp_key % 10);
         temp_key /= 10;
