@@ -23,16 +23,24 @@ Email: [iixun01200.tw@gmail.com]
     }
     return hash % m;  
   ```
-- Rationale: 我先將正負數作為分類，再運用不同的hash基準，已便於所有的數字都可以進行運算，並且選擇
-  質數作為乘數，除了更為規律，也考量到每個key的分布，至於`key%10`取餘的想法，是因為不想讓hash值太大
-  ，會有overflow的問題，這樣同時混和加法與乘法的運算。
+- Rationale: 
+  我先將正負數作為分類，以區分不同的`hash`值，再進行絕對值，已便於所有的數字都可以進行運算，並且選擇質數
+  作為乘數，相比於偶數，能夠最大化分佈的效果，透過`key%10`取餘，將整數進行分解。
+  原本不太理解`Non-integer key`為何要用`unsigned long`作為宣告，但我研究後發現，在`overflow`後，
+  `C++`會從0開始計數，剛好也能夠貼合最大化分佈的目標。
 
 ### Non-integer Keys
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+    unsigned long hash = 0;
+    for (size_t i = 0; i < str.size(); ++i) {
+        hash = tolower(str[i])-'a' + hash * 31;
+    }
   ```
-- Rationale: [Explain your approach and its effectiveness for non-integer keys.]
+- Rationale: 
+  字串部分，我會這樣做的想法，是因為我看到有一個很有名的`hash function - Polynomial Rolling Hash`，
+  我一開始寫的是，根據`isupper`|`islower`，去進行設定，但發現如果遇到`cat`跟`Cat`，如果全部都用類似`c-'a'`或`C-'A'`
+  的方法，會導致分佈不構均勻，最後決定直接忽略大小寫，統一轉成小寫計算。
 
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
