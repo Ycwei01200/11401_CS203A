@@ -37,8 +37,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Github/11401_CS203A/Assignment/AssignmentIV/CXX",
-      "program": "d:/Github/11401_CS203A/Assignment/AssignmentIV/CXX/build/Debug/outDebug",
+      "cwd": "d:/Github/11401_CS203A/Assignment/AssignmentIV/C",
+      "program": "d:/Github/11401_CS203A/Assignment/AssignmentIV/C/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
       "setupCommands": [
