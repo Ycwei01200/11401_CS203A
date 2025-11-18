@@ -10,6 +10,7 @@
 
    Development History:
     - 2025/11/11: Initial implementation
+    - 2025/11/18: download from AssignmentIV (hash_fn.cpp/hash_fn.hpp/main.cpp)
 
    Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */

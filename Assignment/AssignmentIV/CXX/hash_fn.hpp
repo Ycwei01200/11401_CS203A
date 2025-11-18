@@ -8,8 +8,8 @@
 
    Development History:
     - 2025/11/17: Initial implementation
-
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+    - 2025/11/18: download from AssignmentIV (hash_fn.cpp/hash_fn.hpp/main.cpp)
+   Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 #ifndef HASH_FN_HPP
 #define HASH_FN_HPP
