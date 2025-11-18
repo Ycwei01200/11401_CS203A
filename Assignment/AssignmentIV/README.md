@@ -131,10 +131,18 @@ Email: iixun01200.tw@gmail.com
 
 ## Analysis
 - Prime vs non-prime `m`: Prime table sizes generally result in better distribution and fewer collisions.
-- Patterns or collisions: Non-prime table sizes tend to produce repetitive patterns, leading to more collisions.
+  * When $m=10$, since $10$ is an even, non-prime number, the final index is heavily influenced by the least significant digit of the keys ($k \pmod{10}$).
+  * This leads to highly repetitive patterns and causes Secondary Clustering, resulting in non-uniform distribution.
+  * In contrast, when $m=11$ and $m=37$ (both are prime numbers), the modulo operation interacts effectively with the multiplication by $31$ (also a prime). This combination allows the hash function to break the periodicity inherent in the sequential input, leading to a much more efficient and uniform index distribution.
+- Non-prime table sizes tend to produce repetitive patterns, leading to more collisions.
+  * The value of $m$ significantly dictates the hash distribution, but a well-designed hash function can effectively disrupt the key's regularity to achieve better distribution, as demonstrated by the improved performance at $m=11$ and $m=37$.
 - Improvements: Use a prime table size and a well-designed hash function to enhance distribution.
+  
 
 ## Reflection
-1. Designing hash functions requires balancing simplicity and effectiveness to minimize collisions.
-2. Table size significantly impacts the uniformity of the hash distribution, with prime sizes performing better.
-3. The design using a prime table size and a linear transformation formula produced the most uniform index sequence.
+  1.  Designing hash functions requires balancing simplicity and effectiveness to minimize collisions.
+  2.  Table size significantly impacts the uniformity of the hash distribution, with prime sizes performing better.
+  3.  The size of $m$ should not only be determined by the volume of data but also through continuous simulation to confirm its optimal distribution performance, often targeting a load factor (N/M) around $5$ or less for efficiency.
+  4.  The design using a prime table size and a linear transformation formula produced the most uniform index sequence.
+  5.  The successful transition from a highly patterned sequence at $m=10$ to a near-uniform sequence at $m=37$ showcases the Diffusion (擴散) ability of the hash function.
+ 
