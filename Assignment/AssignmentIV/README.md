@@ -132,7 +132,7 @@ Email: iixun01200.tw@gmail.com
 ## Analysis
 - Prime vs non-prime `m`: Prime table sizes generally result in better distribution and fewer collisions.
   * When $m=10$, since $10$ is an even, non-prime number, the final index is heavily influenced by the least significant digit of the keys ($k \pmod{10}$).
-  * This leads to highly repetitive patterns and causes Secondary Clustering, resulting in non-uniform distribution.
+  * This leads to highly repetitive patterns and causes `Secondary Clustering`, resulting in non-uniform distribution.
   * In contrast, when $m=11$ and $m=37$ (both are prime numbers), the modulo operation interacts effectively with the multiplication by $31$ (also a prime). This combination allows the hash function to break the periodicity inherent in the sequential input, leading to a much more efficient and uniform index distribution.
 - Non-prime table sizes tend to produce repetitive patterns, leading to more collisions.
   * The value of $m$ significantly dictates the hash distribution, but a well-designed hash function can effectively disrupt the key's regularity to achieve better distribution, as demonstrated by the improved performance at $m=11$ and $m=37$.
