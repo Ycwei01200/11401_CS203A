@@ -63,15 +63,5 @@
   "C_Cpp_Runner.useLeakSanitizer": false,
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
-  "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "files.associations": {
-    "string": "c",
-    "vector": "c",
-    "memory": "c",
-    "optional": "c",
-    "string_view": "c",
-    "system_error": "c",
-    "text_encoding": "c",
-    "variant": "c"
-  }
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
 }

@@ -14,14 +14,22 @@
 #include <stdio.h>
 
 int myHashInt(int key, int m) {
-    // TODO: replace with your own design
-    return (key % m + m) % m;  // division method example
+    unsigned long hash = 0;
+    long long temp_key = key;
+    if(temp_key < 0){
+        temp_key = -key;
+        hash     = 1000000; 
+    while(temp_key != 0){
+        hash = hash * 31 + (temp_key % 10);
+        temp_key /= 10;
+    }
+    return hash % m;  
 }
 
 int myHashString(const char* str, int m) {
     unsigned long hash = 0;
-    for(int i = 0;str[i] != '\0';i++){
-        hash = hash * 29 + str[i];
+    for(auto i = 0;str[i] != '\0';i++){
+        hash = str[i]-'a' + hash * 31;
     }
     return (int)(hash % m + m) % m; // basic division method
 }
