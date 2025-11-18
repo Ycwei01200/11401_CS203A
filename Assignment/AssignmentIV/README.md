@@ -100,53 +100,9 @@ Email: [iixun01200.tw@gmail.com]
 
 ### Result Snapshot
 - Example output for integers:
-  ```
-  === Hash Function Observation (C Version) ===
-
-  === Table Size m = 10 ===
-  Key     Index
-  -----------------
-  21      1
-  22      2
-  ...
-
-  === Table Size m = 11 ===
-  Key     Index
-  -----------------
-  21      10
-  22      0
-  ...
-
-  === Table Size m = 37 ===
-  Key     Index
-  -----------------
-  21      21
-  22      22
-  ...
-
-  === Hash Function Observation (C++ Version) ===
-
-  === Table Size m = 10 ===
-  Key     Index
-  -----------------
-  21      1
-  22      2
-  ...
-
-  === Table Size m = 11 ===
-  Key     Index
-  -----------------
-  21      10
-  22      0
-  ...
-
-  === Table Size m = 37 ===
-  Key     Index
-  -----------------
-  21      21
-  22      22
-  ...
-  ```
+  * C++
+  ![0](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c++-integer-key(1).png?raw=true)
+  ![1](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c++-integer-key(2).png?raw=true)
 
 - Example output for strings:
   ```
