@@ -11,9 +11,21 @@ Email: [iixun01200.tw@gmail.com]
 ### Integer Keys 
 - Formula / pseudocode:
   ```text
-  [Your implementation here]
+  unsigned long hash = 0;
+    long long temp_key = key;
+    if(temp_key < 0){
+        temp_key = -key;
+        hash     = 1000000; 
+    }
+    while(temp_key != 0){
+        hash = hash * 31 + (temp_key % 10);
+        temp_key /= 10;
+    }
+    return hash % m;  
   ```
-- Rationale: [Explain your design choices and how they minimize collisions.]
+- Rationale: 我先將正負數作為分類，再運用不同的hash基準，已便於所有的數字都可以進行運算，並且選擇
+  質數作為乘數，除了更為規律，也考量到每個key的分布，至於`key%10`取餘的想法，是因為不想讓hash值太大
+  ，會有overflow的問題，這樣同時混和加法與乘法的運算。
 
 ### Non-integer Keys
 - Formula / pseudocode:

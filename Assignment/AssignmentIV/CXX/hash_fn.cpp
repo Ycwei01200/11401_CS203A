@@ -33,7 +33,7 @@ int myHashInt(int key, int m) {
 int myHashString(const std::string& str, int m) {
     unsigned long hash = 0;
     for (size_t i = 0; i < str.size(); ++i) {
-        hash = str[i]-'a' + hash * 31;
+        hash = tolower(str[i])-'a' + hash * 31;
     }
-    return static_cast<int>(hash % m);  // basic division method
+    return static_cast<int>(hash % m);  
 }
