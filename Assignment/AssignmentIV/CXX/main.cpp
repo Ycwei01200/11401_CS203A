@@ -11,13 +11,13 @@
    Development History:
     - 2025/11/11: Initial implementation
 
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+   Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 
 #include <iostream>
 #include <vector>
 #include <string>
-#include "hash_fn.cpp"
+#include "hash_fn.hpp"
 
 // Caution: Do not change the content of this file.
 
