@@ -39,8 +39,8 @@ Email: iixun01200.tw@gmail.com
   ```
 - Rationale: 
   字串部分，我會這樣做的想法，是因為我看到有一個很有名的`hash function - Polynomial Rolling Hash`，
-  我一開始寫的是，根據`isupper`|`islower`，去進行設定，但發現如果遇到`cat`跟`Cat`，如果全部都用類似`c-'a'`或`C-'A'`
-  的方法，會導致分佈不構均勻，最後決定直接忽略大小寫，統一轉成小寫計算。
+  我一開始寫的是，根據`isupper`|`islower`，去進行設定，但發現如果遇到`cat`跟`Cat`，如果不統一大小寫，cat 與 Cat 會被映射到不同的值，
+  最後決定直接忽略大小寫，統一透過`tolower`轉成小寫計算。
 
 ## Experimental Setup
 - Table sizes tested (m): 10, 11, 37
@@ -127,7 +127,9 @@ Email: iixun01200.tw@gmail.com
   Hash table (m=11): ["fox", "cat", "dog", "bat", "cow", ...]
   Hash table (m=37): ["bee", "hen", "pig", "fox", "cat", ...]
   ```
-- Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
+- Observations:
+    * Outputs align with the analysis, showing better distribution with prime table sizes.
+    * With a table size of 10, the modulo operation causes the index to be determined primarily by the key's least significant digit.
 
 ## Analysis
 - Prime vs non-prime `m`: Prime table sizes generally result in better distribution and fewer collisions.
