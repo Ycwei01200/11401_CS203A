@@ -103,30 +103,16 @@ Email: [iixun01200.tw@gmail.com]
   * C++
   ![0](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c++-integer-key(1).png?raw=true)
   ![1](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c++-integer-key(2).png?raw=true)
-
+  * C
+  ![0](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c-integer-key(1).png?raw=true)
+  ![1](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c-integer-key(2).png?raw=true)
 - Example output for strings:
-  ```
-  === String Hash (m = 10) ===
-  Key     Index
-  -----------------
-  cat     0
-  dog     0
-  ...
-
-  === String Hash (m = 11) ===
-  Key     Index
-  -----------------
-  cat     0
-  dog     0
-  ...
-
-  === String Hash (m = 37) ===
-  Key     Index
-  -----------------
-  cat     0
-  dog     0
-  ...
-  ```
+  * C++
+  ![0](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c++-non-integer-key(1).png?raw=true)
+  ![1](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c++-non-integer-key(2).png?raw=true)
+  * C
+  ![0](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c-non-integer-key(1).png?raw=true)
+  ![1](https://github.com/Ycwei01200/11401_CS203A/blob/main/Picture/c-non-integer-key(2).png?raw=true)
 
 - Observations: Outputs align with the analysis, showing better distribution with prime table sizes.
 - Example output for integers:
