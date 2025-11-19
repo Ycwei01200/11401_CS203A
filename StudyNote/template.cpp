@@ -73,6 +73,39 @@ void delete_in_list(node*& head,int val){
     
 
 }
+void move_to(node* head,int form_val,int to_val){
+    if(head == NULL) return;
+    node* prev_form = head;
+    node* current1  = head;
+    node* prev_to   = head;
+    node* current2  = head;
+    while(prev_form->next != NULL && prev_form->next->value != form_val){
+        prev_form = prev_form->next;
+    }
+    current1  = prev_form->next;
+    while(prev_to->next != NULL && prev_to->next->value != to_val){
+        prev_to = prev_to->next;
+    }
+    current2  = prev_to->next;
+    
+    prev_form->next = prev_form->next->next;
+    current1->next  = NULL;
+
+    prev_to->next   = prev_to->next->next;
+    current2->next  = NULL;
+
+    
+    current1->next = prev_to->next;
+    prev_to->next  = current1;
+
+    current2->next = prev_form->next;
+    prev_form->next= current2;
+    
+
+}
+
+
+
 void print_list(node* head){
     node* current = head;
     while(current != NULL){
