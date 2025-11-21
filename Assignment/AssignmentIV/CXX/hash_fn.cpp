@@ -15,6 +15,7 @@
    Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 #include <string>
+#include <cctype>
 #include "hash_fn.hpp"
 
 int myHashInt(int key, int m) {
