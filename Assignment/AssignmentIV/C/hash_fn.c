@@ -12,12 +12,12 @@
     - 2025/11/18: download from AssignmentIV (hash_fn.cpp/hash_fn.hpp/main.cpp)
     - 2025/11/18: modify hash functions
     - 2025/11/18: 23:51 Finished Development(revised developer info)
-
+    - 2025/11/21: revise the function name
    Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 #include <stdio.h>
 
-int myHashInt(int key, int m) {
+int my_hash_int(int key, int m) {
     unsigned long hash = 0;
     long long temp_key = key;
     if(temp_key < 0){
@@ -31,7 +31,7 @@ int myHashInt(int key, int m) {
     return hash % m;  
 }
 
-int myHashString(const char* str, int m) {
+int my_Hash_String(const char* str, int m) {
     unsigned long hash = 0;
     for(auto i = 0;str[i] != '\0';i++){
         hash = str[i]-'a' + hash * 31;
