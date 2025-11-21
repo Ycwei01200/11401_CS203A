@@ -12,6 +12,7 @@
     - 2025/11/18: download from AssignmentIV (hash_fn.cpp/hash_fn.hpp/main.cpp)
     - 2025/11/18: modify hash functions
     - 2025/11/18: 23:51 Finished Development(revised developer info)
+    
    Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 #include <string>
