@@ -16,6 +16,7 @@
    Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 #include <stdio.h>
+#include <ctype.h>
 
 int myHashInt(int key, int m) {
     unsigned long hash = 0;
@@ -34,7 +35,7 @@ int myHashInt(int key, int m) {
 int myHashString(const char* str, int m) {
     unsigned long hash = 0;
     for(auto i = 0;str[i] != '\0';i++){
-        hash = str[i]-'a' + hash * 31;
+        hash = tolower(str[i])-'a' + hash * 31;
     }
     return (int)(hash % m + m) % m; // basic division method
 }
