@@ -17,7 +17,7 @@
  */
 #include <stdio.h>
 
-int my_hash_int(int key, int m) {
+int myHashInt(int key, int m) {
     unsigned long hash = 0;
     long long temp_key = key;
     if(temp_key < 0){
@@ -31,7 +31,7 @@ int my_hash_int(int key, int m) {
     return hash % m;  
 }
 
-int my_Hash_String(const char* str, int m) {
+int myHashString(const char* str, int m) {
     unsigned long hash = 0;
     for(auto i = 0;str[i] != '\0';i++){
         hash = str[i]-'a' + hash * 31;
