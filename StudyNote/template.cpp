@@ -103,6 +103,82 @@ void move_to(node* head,int form_val,int to_val){
     
 
 }
+void Selection_sort_by_value(node* head){
+    if(head == NULL || head->next == NULL) return;
+    for(node* i = head; i != NULL ; i = i->next){
+        node* min_node = i;
+        for(node* j = i->next; j!= NULL; j = j->next){
+            if(j->value < min_node->value){
+                min_node = j;
+            }
+        }
+        if(min_node != i){
+            int temp = i->value;
+            i->value = min_node->value;
+            min_node->value = temp;
+        }
+    }
+}
+// 太抽象了
+void Selection_sort_by_pointer(node*& head){
+    // 1. 基本檢查：如果是空串列或只有一個節點，不用排
+    if(head == NULL || head->next == NULL) return;
+
+    // i 是「目前要處理的位置」
+    for(node* i = head; i->next != NULL; i = i->next){
+        
+        // --- 步驟 A: 找出最小值 ---
+        node* min_node = i;       // 先假設 i 自己是最小的
+        node* prev_min = NULL;    // 紀錄 min_node 的前一個節點 (為了拔出來用)
+        
+        node* prev_j = i;         // 這是 j 的前一個節點
+        for(node* j = i->next; j != NULL; j = j->next){
+            if(j->value < min_node->value){
+                min_node = j;
+                prev_min = prev_j; // 記住最小值的前一個是誰
+            }
+            prev_j = j; // 往下走
+        }
+
+        // --- 步驟 B: 如果真的找到比 i 更小的節點，就進行搬移 ---
+        if(min_node != i){
+            
+            // 1. 【拔出來】把 min_node 從原本位置移除
+            // prev_min->next 接到 min_node->next，這樣 min_node 就斷開了
+            prev_min->next = min_node->next;
+
+            // 2. 【插進去】把 min_node 插到 i 的前面
+            min_node->next = i;
+
+            // 3. 【接起來】處理 i 的前一個節點指向 min_node
+            if(i == head){
+                head = min_node; // 如果 i 是頭，頭就要換人做
+            } else {
+                // 如果 i 不是頭，我們要找到 i 的前一個節點 (prev_i)
+                node* prev_i = head;
+                while(prev_i->next != i){
+                    prev_i = prev_i->next;
+                }
+                prev_i->next = min_node; // 讓前一個節點指向新的 min_node
+            }
+
+            // 4. 【更新 i】
+            // 因為我們把 min_node 插到了 i 的位置，
+            // 現在 i 指標應該要指著這個新位置 (min_node)，
+            // 這樣迴圈的 i = i->next 才會正確走到下一個位置 (原本的 i)。
+            i = min_node;
+        }
+    }
+}
+// ...existing code...
+
+
+
+
+
+
+
+}
 
 
 
