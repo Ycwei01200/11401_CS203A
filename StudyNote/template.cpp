@@ -170,17 +170,6 @@ void Selection_sort_by_pointer(node*& head){
         }
     }
 }
-// ...existing code...
-
-
-
-
-
-
-
-}
-
-
 
 void print_list(node* head){
     node* current = head;
