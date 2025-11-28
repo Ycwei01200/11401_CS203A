@@ -11,7 +11,8 @@
     - 2025/11/17: Refactored to use hash_fn.hpp
     - 2025/11/28: download from AssignmentIV (hash_fn.cpp/hash_fn.hpp/main.cpp)
     - 2025/11/28: modify hash functions
-
+    - 2025/11/28: Finished Development(revised developer info)
+    - 2025/11/28: Update logic to use tolower() (Kept CamelCase to match main.c interface)
    Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 #include "hash_fn.h"
