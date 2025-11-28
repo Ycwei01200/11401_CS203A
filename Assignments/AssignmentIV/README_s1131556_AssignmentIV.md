@@ -4,6 +4,8 @@ This assignment focuses on the design and observation of hash functions using C/
 Students are expected to implement and analyze the behavior of hash functions, 
 evaluate their efficiency, and understand their applications in computer science.
 
+***This action was taken to reorganize the previously chaotic commits and to incorporate initial commits, develop commits, and finished commits. Consequently, the commit times may appear somewhat abnormal. However, to verify that this work is my own, you can refer to my commit history prior to November 28th. I have also further optimized the readme.md, which is available for your reference.***
+
 Developer: Yu-Cheng Wei
 Email: iixun01200.tw@gmail.com
 
@@ -26,8 +28,8 @@ Email: iixun01200.tw@gmail.com
 - Rationale: 
   我先將正負數作為分類，以區分不同的`hash`值，再進行絕對值，已便於所有的數字都可以進行運算，並且選擇質數
   作為乘數，相比於偶數，能夠最大化分佈的效果，透過`key%10`取餘，將整數進行分解。
-  原本不太理解`Non-integer key`為何要用`unsigned long`作為宣告，但我研究後發現，在`overflow`後，
-  `C++`會從0開始計數，剛好也能夠貼合最大化分佈的目標。
+  原本不太理解 `Non-integer key` 為何要用 `unsigned long` 作為宣告，但我研究後發現，在 overflow 後，
+  C++ 會從 0 開始計數（`unsigned` 類型的溢出行為是明確定義的），剛好也能夠貼合最大化分佈的目標。
 
 ### Non-integer Keys
 - Formula / pseudocode:
@@ -147,4 +149,4 @@ Email: iixun01200.tw@gmail.com
   3.  The size of $m$ should not only be determined by the volume of data but also through continuous simulation to confirm its optimal distribution performance, often targeting a load factor (N/M) around $5$ or less for efficiency.
   4.  The design using a prime table size and a linear transformation formula produced the most uniform index sequence.
   5.  The successful transition from a highly patterned sequence at $m=10$ to a near-uniform sequence at $m=37$ showcases the Diffusion (擴散) ability of the hash function.
- 
+
