@@ -8,10 +8,11 @@
    and string keys using different table sizes. It utilizes the hash functions
    defined in "hash_fn.cpp".
 
-   Development History:
+    Development History:
     - 2025/11/11: Initial implementation
-
-   Developer: Yu-Feng Huang <yfhuang@saturn.yzu.edu.tw>
+    - 2025/11/18: download from AssignmentIV (hash_fn.cpp/hash_fn.hpp/main.cpp)
+    
+   Developer: Yu-Cheng Wei <iixun01200.tw@gmail.com> 
  */
 
 #include <iostream>
